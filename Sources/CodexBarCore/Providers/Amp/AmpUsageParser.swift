@@ -70,7 +70,7 @@ enum AmpUsageParser {
                 used: 100 - clampedRemaining,
                 hourlyReplenishment: 0,
                 windowHours: 24,
-                resetDescription: "daily")
+                resetDescription: "resets daily")
         }()
         let resolvedFreeUsage = freeUsage ?? freePercentUsage
         guard resolvedFreeUsage != nil || individualCredits != nil || !workspaceBalances.isEmpty else {

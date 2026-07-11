@@ -510,7 +510,7 @@ public struct UsageSnapshot: Codable, Sendable {
         // Amp's percentage-based daily quota supersedes the legacy rolling-replenishment cadence. Do not attach
         // that older exact reset to the new daily window; other providers retain the shared backfill behavior.
         let cachedPrimary: RateWindow? = if self.identity?.providerID == .amp,
-                                            self.primary?.resetDescription == "daily"
+                                            self.primary?.resetDescription == "resets daily"
         {
             nil
         } else {

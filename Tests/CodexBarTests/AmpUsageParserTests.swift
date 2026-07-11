@@ -82,7 +82,7 @@ struct AmpUsageParserTests {
         #expect(usage.primary?.usedPercent == 39)
         #expect(usage.primary?.windowMinutes == 1440)
         #expect(usage.primary?.resetsAt == nil)
-        #expect(usage.primary?.resetDescription == "daily")
+        #expect(usage.primary?.resetDescription == "resets daily")
     }
 
     @Test
@@ -117,7 +117,7 @@ struct AmpUsageParserTests {
 
         #expect(legacy.primary?.resetsAt == now.addingTimeInterval(8 * 3600))
         #expect(published.primary?.resetsAt == nil)
-        #expect(published.primary?.resetDescription == "daily")
+        #expect(published.primary?.resetDescription == "resets daily")
     }
 
     @Test
